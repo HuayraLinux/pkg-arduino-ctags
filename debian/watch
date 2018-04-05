@@ -1,0 +1,9 @@
+# See uscan(1) for format
+
+# Compulsory line, this is a version 4 file
+version=4
+
+opts="filenamemangle=s%(?:.*?)ctags-(.*)\.tar\.xz$%ctags-$1.tar.xz%,\
+      pgpsigurlmangle=s%$%.asc%" \
+     https://github.com/arduino/ctags/releases \
+     .*/ctags-@ANY_VERSION@\.tar\.xz debian uupdate
